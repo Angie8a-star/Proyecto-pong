@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dny30tc5nc0we"]
+
+[ext_resource type="Script" path="res://Script/player_1.gd" id="1_ewqfx"]
+[ext_resource type="Texture2D" uid="uid://7a8vjwgdy77v" path="res://Recursos/Imagen para paredes y paleta.png" id="1_k4v8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7k4n"]
+size = Vector2(48, 128)
+
+[node name="player_1" type="CharacterBody2D"]
+position = Vector2(32, 320)
+script = ExtResource("1_ewqfx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.533333)
+texture = ExtResource("1_k4v8e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 0)
+shape = SubResource("RectangleShape2D_j7k4n")
